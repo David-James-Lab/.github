@@ -3,27 +3,38 @@
 <!-- Link the Notion task (the TASK-ID from your branch name) -->
 **Notion:** [OMIX-XX – task name](paste-notion-link-here)
 
-## Summary
+## Context
 
-<!-- What does this PR do, and why? 1–3 sentences. -->
+<!-- Background a reviewer (or someone reading this in a year) needs:
+     what's the state of the world that makes this PR necessary?
+     e.g. "Legacy ETL was decommissioned; the rebuilt pipeline left
+     component X disconnected." 1–3 sentences. Delete if the task
+     link already says it all. -->
 
-## Changes
+## What changed
 
-<!-- Key changes so the reviewer knows where to look -->
+<!-- The change itself and why this approach. For swaps/migrations,
+     name both old and new explicitly (old source → new source). -->
 - 
 
 ## How was this tested?
 
-<!-- Commands run, manual steps, edge cases covered -->
+<!-- Evidence, not assertion. Include whatever applies:
+     - exact commands run (dbt run --select ..., pytest ..., etc.)
+     - environment used (QA/staging) and how it was populated
+     - reconciliation results: old vs new comparison, sample dates/cases
+     - discrepancies found, their root cause, and why they're acceptable
+     End with the conclusion a reviewer should take away. -->
 
-## Screenshots / recordings
+## Screenshots/recordings
 
-<!-- UI changes only — delete this section otherwise -->
+<!-- UI or dashboard changes only — delete this section otherwise -->
 
 ## Checklist
 
 - [ ] Branch follows `TASK-ID/TASK-NAME/DESCRIPTION`
-- [ ] PR title follows `TASK-ID/TASK-NAME <type>: <subject>` — **it becomes the squash commit on `main`**
+- [ ] PR title follows `TASK-ID <type>: <subject>` — it becomes the squash commit on `main`
+- [ ] This PR contains work for a single task only
 - [ ] Self-review of the diff performed
 - [ ] Tests added or updated
 - [ ] Docs updated where relevant
